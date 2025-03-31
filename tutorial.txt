@@ -1,0 +1,4 @@
+Add the uRl and API key in the .env file
+Install Supabase, the client library with the corresponding code from the docs
+You can create a folder called config in the src dir to store the API starter file ie the supabaseClient.js file
+
