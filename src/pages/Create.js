@@ -45,14 +45,14 @@ const Create = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
 
-        <label htmlFor="method">Method:</label>
+        <label htmlFor="method">Description:</label>
         <textarea 
           id="method"
           value={method}
           onChange={(e) => setMethod(e.target.value)}
         />
 
-        <label htmlFor="rating">Rating:</label>
+        <label htmlFor="rating">Priority Rating:</label>
         <input 
           type="number"
           id="rating"
@@ -60,7 +60,7 @@ const Create = () => {
           onChange={(e) => setRating(e.target.value)}
         />
 
-        <button>Create Smoothie Recipe</button>
+        <button>Create Todo</button>
 
         {formError && <p className="error">{formError}</p>}
       </form>
