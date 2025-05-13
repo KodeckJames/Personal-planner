@@ -1,8 +1,10 @@
 import supabase from "../config/supabaseClient"
 import { useEffect, useState } from "react"
-
+// import { loadVanta } from "./vantaBackground";
 //Components
 import SmoothieCard from "../components/SmoothieCard";
+// window.addEventListener("DOMContentLoaded", loadVanta);
+// Add this to the div to implement it: id="vanta-bg" style={{ width: "100vw", height: "100vh" }}
 const Home = () => {
   const [fetchError, setFetchError] = useState(null);
   const [smoothies, setSmoothies] = useState(null);
@@ -42,11 +44,11 @@ const Home = () => {
       {smoothies && (
         <div className="smoothies">
           <div className="order-by">
-            <p>Order by</p>
+            <p className="order-text-color">Order by:</p>
             <button onClick={()=>setOrderBy('created_at')}>Time created </button>
             <button onClick={() => setOrderBy('title')}>Title</button>
             <button onClick={() => setOrderBy('rating')}>Priority</button>
-            {orderBy}
+            <span className="order-text-color">{orderBy}</span>
           </div>
           <div className="smoothie-grid">
           {smoothies.map(smoothie => (

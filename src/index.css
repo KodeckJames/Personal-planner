@@ -3,8 +3,8 @@
 /* @import "tailwindcss"; */
 
 :root {
-  --primary: #12bca2;
-  --secondary: #6d15df;
+  --primary: oklch(49.6% 0.265 301.924);
+  --secondary: oklch(45.2% 0.211 324.591);
 }
 h1,h2,h3 {
   margin: 0;
@@ -14,7 +14,8 @@ body {
   margin: 0;
   color: #333;
   font-family: 'Poppins';
-  background: #f2f2f2;
+  background: oklch(38% 0.189 293.745)
+  ;
 }
 nav {
   background: var(--primary);
@@ -109,4 +110,7 @@ form button {
   border-radius: 6px;
   font-family: "Poppins";
   cursor: pointer;
+}
+.order-text-color{
+  color: #fff;
 }
